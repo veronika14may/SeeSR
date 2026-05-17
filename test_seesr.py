@@ -93,6 +93,7 @@ def load_seesr_pipeline(args, accelerator, enable_xformers_memory_efficient_atte
         if is_xformers_available():
             # unet.enable_xformers_memory_efficient_attention()
             # controlnet.enable_xformers_memory_efficient_attention()
+            print('Not available')
         else:
             raise ValueError("xformers is not available. Make sure it is installed correctly")
 
