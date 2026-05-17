@@ -660,7 +660,7 @@ elif args.pretrained_model_name_or_path:
 text_encoder_cls = import_model_class_from_model_name_or_path(args.pretrained_model_name_or_path, args.revision)
 
 # Load scheduler and models
-noise_scheduler = DDPMScheduler.from_pretrained(args.pretrained_model_name_or_path, subfolder="scheduler")
+noise_scheduler = DDPMScheduler.from_pretrained('/kaggle/working', subfolder="scheduler")
 text_encoder = text_encoder_cls.from_pretrained(
     args.pretrained_model_name_or_path, subfolder="text_encoder", revision=args.revision
 )
