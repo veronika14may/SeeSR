@@ -70,8 +70,8 @@ class Predictor(BasePredictor):
         controlnet.requires_grad_(False)
 
         if is_xformers_available():
-            unet.enable_xformers_memory_efficient_attention()
-            controlnet.enable_xformers_memory_efficient_attention()
+            # unet.enable_xformers_memory_efficient_attention()
+            # controlnet.enable_xformers_memory_efficient_attention()
         else:
             raise ValueError("xformers is not available. Make sure it is installed correctly")
 
