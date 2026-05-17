@@ -75,7 +75,7 @@ def load_seesr_pipeline(args, accelerator, enable_xformers_memory_efficient_atte
 
     # Load scheduler, tokenizer and models.
     
-    scheduler = DDPMScheduler.from_pretrained(args.pretrained_model_path, subfolder="scheduler")
+    scheduler = DDPMScheduler.from_pretrained('/kaggle/working', subfolder="scheduler")
     text_encoder = CLIPTextModel.from_pretrained(args.pretrained_model_path, subfolder="text_encoder")
     tokenizer = CLIPTokenizer.from_pretrained(args.pretrained_model_path, subfolder="tokenizer")
     vae = AutoencoderKL.from_pretrained(args.pretrained_model_path, subfolder="vae")
